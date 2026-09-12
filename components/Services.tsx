@@ -10,12 +10,12 @@ export default function Services() {
     { icon: "fa-magnifying-glass-dollar", title: "Denial Management", desc: "We do not resubmit and hope. We investigate and fix." },
   ];
   return (
-    <div className="max-w-7xl mx-auto px-6 py-20">
+    <div id="services" className="max-w-7xl mx-auto scroll-mt-28 px-6 py-20">
       <div className="reveal-section text-center max-w-2xl mx-auto mb-14">
         <h2 className="text-3xl md:text-4xl font-semibold text-dark-text mb-4">Everything We Handle, So You Don&apos;t Have To</h2>
         <p className="text-lg text-light-text">The billing, coding, credentialing, and revenue-cycle work that keeps your practice financially healthy.</p>
       </div>
-      <div id="services" className="stagger-cards grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="stagger-cards grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {services.map((s, i) => (
           <div key={i} className="stagger-item bg-white p-7 rounded-3xl border border-slate-100 shadow-premium-sm hover:shadow-premium-md hover:-translate-y-1.5 transition-all duration-300">
             <div className="w-16 h-16 rounded-2xl bg-accent-soft flex items-center justify-center mb-6">

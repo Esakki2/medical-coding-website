@@ -35,10 +35,10 @@ export default function Hero() {
             You spent years becoming a doctor. Not a billing expert. Not a claims investigator. Inovex turns your clinical work into revenue that actually lands in your account.
           </p>
           <div className="flex gap-4 flex-wrap">
-            <a href="#contact" className="hero-cta inline-flex items-center gap-2 bg-primary text-white px-7 py-3.5 rounded-full font-semibold shadow-lg shadow-primary/20 hover:bg-primary-light hover:-translate-y-0.5 transition-all">
+            <a href="#contact" className="hero-cta inline-flex items-center justify-center gap-2 text-center bg-primary text-white px-7 py-3.5 rounded-full font-semibold shadow-lg shadow-primary/20 hover:bg-primary-light hover:-translate-y-0.5 transition-all">
               Get a Free Revenue Check-Up <i className="fas fa-arrow-right"></i>
             </a>
-            <a href="#contact" className="hero-cta inline-flex items-center bg-transparent text-primary border-2 border-primary px-7 py-3.5 rounded-full font-semibold hover:bg-primary hover:text-white transition-all">
+            <a href="#contact" className="hero-cta inline-flex items-center justify-center gap-2 text-center bg-transparent text-primary border-2 border-primary px-7 py-3.5 rounded-full font-semibold hover:bg-primary hover:text-white transition-all">
               Talk to Us
             </a>
           </div>

@@ -23,7 +23,7 @@ export default function CTA() {
           <p className="cta-child text-white/85 max-w-2xl mx-auto mb-8 text-lg">
             Stop wondering where your claims went, why insurance keeps saying no, or where money is slipping through the cracks. Partner with a team that understands medicine and means business.
           </p>
-            <a href="#" className="cta-child inline-flex items-center gap-2 bg-white text-primary px-10 py-4 rounded-full font-semibold text-lg shadow-lg hover:-translate-y-0.5 transition-all">
+            <a href="mailto:hello@inovex.health?subject=Free%20Revenue%20Check-Up" className="cta-child inline-flex items-center justify-center gap-2 text-center bg-white text-primary px-10 py-4 rounded-full font-semibold text-lg shadow-lg hover:-translate-y-0.5 transition-all">
             Book Your Free Revenue Check-Up <i className="fas fa-arrow-right"></i>
           </a>
           <p className="cta-child mt-6 text-sm text-white/70">

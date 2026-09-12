@@ -14,7 +14,7 @@ export default function Footer() {
                 src={logoImage}
                 alt="INOVEX Business Solutions"
                 fill
-                sizes="176px"
+                sizes="208px"
                 className="object-cover object-center"
               />
             </div>

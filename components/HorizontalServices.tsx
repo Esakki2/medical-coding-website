@@ -100,7 +100,7 @@ export default function HorizontalServices() {
               <i className="fas fa-arrow-right text-primary text-3xl mb-6 animate-pulse"></i>
               <h3 className="text-2xl md:text-3xl font-semibold text-dark-text mb-3">Ready to start?</h3>
               <p className="text-light-text mb-6">Your practice is already earning more than you are seeing. Let&apos;s go find it.</p>
-              <a href="#contact" className="inline-flex items-center gap-2 bg-primary text-white px-7 py-3.5 rounded-full font-semibold hover:bg-primary-light transition-all">
+              <a href="#contact" className="inline-flex items-center justify-center gap-2 text-center bg-primary text-white px-7 py-3.5 rounded-full font-semibold hover:bg-primary-light transition-all">
                 Book Your Free Revenue Check-Up <i className="fas fa-arrow-right"></i>
               </a>
             </div>
