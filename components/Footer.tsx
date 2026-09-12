@@ -1,4 +1,5 @@
 import Image from "next/image";
+import logoImage from "../assets/logo.jpeg";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -8,9 +9,9 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-10">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
-            <div className="relative h-16 w-44 overflow-hidden bg-white">
+            <div className="relative h-20 w-52 overflow-hidden rounded-lg bg-white">
               <Image
-                src="/assets/logo.jpeg"
+                src={logoImage}
                 alt="INOVEX Business Solutions"
                 fill
                 sizes="176px"

@@ -1,19 +1,25 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import Image from "next/image";
+import logoImage from "../assets/logo.jpeg";
 
 export default function Navbar() {
   const navRef = useRef<HTMLElement>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
     gsap.from(navRef.current, { y: -40, duration: 1, ease: "power3.out" });
+    const handleScroll = () => setIsScrolled(window.scrollY > 24);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <header ref={navRef} className="sticky top-0 z-50 bg-white border-b border-slate-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-5 flex flex-col sm:flex-row justify-between items-center gap-4">
-        <div className="relative h-16 w-44 shrink-0 overflow-hidden">
+    <header ref={navRef} className="sticky top-0 z-50 bg-white border-b border-slate-100 transition-shadow duration-300">
+      <div className={`max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between items-center gap-4 transition-[padding] duration-300 ${isScrolled ? "py-2 sm:py-3" : "py-4 sm:py-5"}`}>
+        <div className={`relative shrink-0 overflow-hidden transition-[height,width] duration-300 ${isScrolled ? "h-14 w-36" : "h-20 w-44"}`}>
           <Image
-            src="/assets/logo.jpeg"
+            src={logoImage}
             alt="INOVEX Business Solutions"
             fill
             sizes="176px"
