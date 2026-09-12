@@ -1,10 +1,10 @@
 export default function TechStrip() {
   const items = [
-    { icon: "fa-shield-alt", label: "HIPAA Compliant" },
-    { icon: "fa-certificate", label: "CPC & CCS Certified" },
-    { icon: "fa-cloud", label: "Cloud-based EHR" },
-    { icon: "fa-database", label: "AI-assisted coding" },
-    { icon: "fa-chart-bar", label: "Real-time analytics" },
+    { icon: "fa-eye", label: "Billed & paid visibility" },
+    { icon: "fa-clock", label: "Pending claim tracking" },
+    { icon: "fa-file-circle-xmark", label: "Denial investigation" },
+    { icon: "fa-user-shield", label: "HIPAA certified" },
+    { icon: "fa-chart-line", label: "Revenue leak detection" },
   ];
   return (
     <div id="compliance" className="max-w-7xl mx-auto px-6 py-6">

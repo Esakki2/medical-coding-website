@@ -41,11 +41,11 @@ export default function HorizontalServices() {
   }, []);
 
   const slides = [
-    { num: "01", icon: "fa-file-medical-alt", title: "Precision Medical Coding", desc: "Every code tells a clinical story. We translate complex documentation into accurate, compliant codes that protect your revenue and your patients.", stat: "99.2%", statLabel: "first-pass accuracy", color: "from-[#0f4c81] to-[#2c6b9e]" },
-    { num: "02", icon: "fa-chart-pie", title: "Revenue Cycle Mastery", desc: "From charge capture to final payment — we optimize every step. Denial management, analytics, and cash flow visibility included.", stat: "18%", statLabel: "avg. revenue lift", color: "from-[#31a9a9] to-[#1e8a8a]" },
-    { num: "03", icon: "fa-robot", title: "AI-Assisted Workflows", desc: "We blend human expertise with intelligent automation. AI-suggested codes, real-time edits, and EHR integrations that save hours daily.", stat: "40%", statLabel: "faster processing", color: "from-[#2c6b9e] to-[#31a9a9]" },
-    { num: "04", icon: "fa-clipboard-check", title: "Compliance & Audit Ready", desc: "Stay ahead of regulatory shifts. Internal audits, provider education, and risk assessments tailored to your specialty.", stat: "100%", statLabel: "HIPAA compliant", color: "from-[#0c1e2e] to-[#0f4c81]" },
-    { num: "05", icon: "fa-handshake", title: "Founder-Led Partnership", desc: "You work directly with Nafiya. No account managers, no handoffs — just direct access to a certified expert invested in your success.", stat: "1:1", statLabel: "dedicated expert", color: "from-[#1e8a8a] to-[#0f4c81]" },
+    { num: "01", icon: "fa-eye", title: "Total Visibility. Zero Guesswork.", desc: "See what has been billed and paid, what is pending, what was denied, and exactly where your revenue is leaking.", stat: "100%", statLabel: "clear answers", color: "from-[#0f4c81] to-[#2c6b9e]" },
+    { num: "02", icon: "fa-user-doctor", title: "A Doctor's Eye", desc: "Our process is led by someone who understands clinical notes, medical necessity, and the real story behind every encounter.", stat: "2014", statLabel: "expertise since", color: "from-[#31a9a9] to-[#1e8a8a]" },
+    { num: "03", icon: "fa-shield-heart", title: "Fewer Denials", desc: "Precise, compliant coding and thoughtful claim investigation help your revenue move forward instead of getting stuck.", stat: "8", statLabel: "ways we help", color: "from-[#2c6b9e] to-[#31a9a9]" },
+    { num: "04", icon: "fa-chart-line", title: "Revenue Protection", desc: "We find the quiet leaks, follow up on what is owed, and help you fight for rates that reflect the care you provide.", stat: "1:1", statLabel: "direct partnership", color: "from-[#0c1e2e] to-[#0f4c81]" },
+    { num: "05", icon: "fa-handshake", title: "Built Around Your Practice", desc: "No vague invoices and no handoffs. Just straight answers, every month, from a team that understands medicine and means business.", stat: "0", statLabel: "guesswork", color: "from-[#1e8a8a] to-[#0f4c81]" },
   ];
 
   return (
@@ -61,7 +61,7 @@ export default function HorizontalServices() {
             </h2>
           </div>
           <p className="text-light-text max-w-md text-base md:text-lg">
-            Five pillars of expertise — scroll horizontally to discover how Nafiya transforms healthcare businesses.
+            A billing partner who sees the clinical story, protects your revenue, and keeps you informed.
           </p>
         </div>
         <div className="mt-8 h-[3px] w-full bg-slate-200 rounded-full overflow-hidden">
@@ -99,9 +99,9 @@ export default function HorizontalServices() {
             <div className="h-panel-inner text-center w-full">
               <i className="fas fa-arrow-right text-primary text-3xl mb-6 animate-pulse"></i>
               <h3 className="text-2xl md:text-3xl font-semibold text-dark-text mb-3">Ready to start?</h3>
-              <p className="text-light-text mb-6">Let&apos;s build a coding strategy tailored to your practice.</p>
+              <p className="text-light-text mb-6">Your practice is already earning more than you are seeing. Let&apos;s go find it.</p>
               <a href="#contact" className="inline-flex items-center gap-2 bg-primary text-white px-7 py-3.5 rounded-full font-semibold hover:bg-primary-light transition-all">
-                Get in touch <i className="fas fa-arrow-right"></i>
+                Book Your Free Revenue Check-Up <i className="fas fa-arrow-right"></i>
               </a>
             </div>
           </div>

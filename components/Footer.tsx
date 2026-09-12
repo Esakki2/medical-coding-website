@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Footer() {
   const year = new Date().getFullYear();
 
@@ -6,9 +8,14 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-10">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
-            <div className="flex items-center gap-2 text-2xl font-bold">
-              <i className="fas fa-heartbeat text-accent"></i>
-              inovex<span className="text-accent">.</span>
+            <div className="relative h-16 w-44 overflow-hidden bg-white">
+              <Image
+                src="/assets/logo.jpeg"
+                alt="INOVEX Business Solutions"
+                fill
+                sizes="176px"
+                className="object-cover object-center"
+              />
             </div>
             <address className="mt-3 max-w-sm not-italic text-sm leading-6 text-white/60">
               No. 5, Sri Ram Nagar, 1st Main Road, Mugalivakkam, Porur, Chennai - 600116
@@ -22,7 +29,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 pt-6 border-t border-white/10 text-center text-sm leading-6 text-white/60">
-          Copyright {year} inovex - Medical Coding & HealthTech. All rights reserved. Built with precision & care.
+          Copyright {year} INOVEX BUSINESS SOLUTIONS PVT LTD. All rights reserved.
         </div>
       </div>
     </footer>

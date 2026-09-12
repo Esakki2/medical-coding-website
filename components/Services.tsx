@@ -1,17 +1,21 @@
 export default function Services() {
   const services = [
-    { icon: "fa-file-medical-alt", title: "Medical Coding", desc: "Accurate ICD-10, CPT, and HCPCS coding for optimal reimbursement and compliance. Auditing & education included." },
-    { icon: "fa-chart-pie", title: "Revenue Cycle", desc: "End-to-end RCM: charge entry, claims, denial management, and analytics to maximize your revenue health." },
-    { icon: "fa-robot", title: "HealthTech Integration", desc: "Leveraging AI, EHR optimization, and automation to streamline coding workflows and reduce administrative burden." },
-    { icon: "fa-clipboard-check", title: "Compliance & Audit", desc: "Risk assessments, internal audits, and provider training to keep you ahead of regulatory changes." },
+    { icon: "fa-headset", title: "Virtual Assistant Support", desc: "Take the admin grind off your front desk so your team can stay focused on patients." },
+    { icon: "fa-id-card", title: "Eligibility & Benefits Verification", desc: "Know exactly what is covered before the patient walks in." },
+    { icon: "fa-user-check", title: "Credentialing", desc: "Get in-network without drowning in paperwork or chasing silent delays." },
+    { icon: "fa-file-signature", title: "CAQH Management", desc: "Keep your profile current so nothing stalls silently." },
+    { icon: "fa-handshake", title: "Contract & Rate Re-Negotiation", desc: "We fight for better reimbursement rates on your behalf." },
+    { icon: "fa-file-medical-alt", title: "Medical Coding", desc: "Precise, compliant coding built around what actually happened in the room." },
+    { icon: "fa-money-check-dollar", title: "Accounts Receivable Management", desc: "We chase what is owed, so it does not just sit and age." },
+    { icon: "fa-magnifying-glass-dollar", title: "Denial Management", desc: "We do not resubmit and hope. We investigate and fix." },
   ];
   return (
     <div className="max-w-7xl mx-auto px-6 py-20">
       <div className="reveal-section text-center max-w-2xl mx-auto mb-14">
-        <h2 className="text-3xl md:text-4xl font-semibold text-dark-text mb-4">Healthcare business, refined</h2>
-        <p className="text-lg text-light-text">From medical coding to technology integration — comprehensive solutions designed for modern practices.</p>
+        <h2 className="text-3xl md:text-4xl font-semibold text-dark-text mb-4">Everything We Handle, So You Don&apos;t Have To</h2>
+        <p className="text-lg text-light-text">The billing, coding, credentialing, and revenue-cycle work that keeps your practice financially healthy.</p>
       </div>
-      <div className="stagger-cards grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div id="services" className="stagger-cards grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {services.map((s, i) => (
           <div key={i} className="stagger-item bg-white p-7 rounded-3xl border border-slate-100 shadow-premium-sm hover:shadow-premium-md hover:-translate-y-1.5 transition-all duration-300">
             <div className="w-16 h-16 rounded-2xl bg-accent-soft flex items-center justify-center mb-6">

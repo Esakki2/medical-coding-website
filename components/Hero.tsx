@@ -25,28 +25,28 @@ export default function Hero() {
       <section className="py-10 md:py-20 flex flex-col lg:flex-row items-center gap-10 lg:gap-12">
         <div className="flex-1 w-full min-w-0">
           <span className="hero-badge inline-block bg-accent-soft text-primary font-semibold text-xs px-5 py-2 rounded-full mb-6 tracking-wider uppercase border border-accent/20">
-            <i className="fas fa-shield-alt mr-2"></i>Medical Coding &amp; HealthTech
+            <i className="fas fa-shield-alt mr-2"></i>Medical Billing &amp; Revenue Cycle Management
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-5 text-dark-text leading-[1.1]">
-            <div className="hero-line-1">Precision coding.</div>
-            <div className="hero-line-2 gradient-text">Trusted healthcare.</div>
+            <div className="hero-line-1">Stop Losing Money</div>
+            <div className="hero-line-2 gradient-text">to Paperwork.</div>
           </h1>
           <p className="hero-desc text-lg md:text-xl text-light-text mb-8 max-w-xl">
-            inovex bridges clinical accuracy, compliance, and modern technology — empowering providers with reliable coding and business solutions.
+            You spent years becoming a doctor. Not a billing expert. Not a claims investigator. Inovex turns your clinical work into revenue that actually lands in your account.
           </p>
           <div className="flex gap-4 flex-wrap">
             <a href="#contact" className="hero-cta inline-flex items-center gap-2 bg-primary text-white px-7 py-3.5 rounded-full font-semibold shadow-lg shadow-primary/20 hover:bg-primary-light hover:-translate-y-0.5 transition-all">
-              Work with inovex <i className="fas fa-arrow-right"></i>
+              Get a Free Revenue Check-Up <i className="fas fa-arrow-right"></i>
             </a>
-            <a href="#services" className="hero-cta inline-flex items-center bg-transparent text-primary border-2 border-primary px-7 py-3.5 rounded-full font-semibold hover:bg-primary hover:text-white transition-all">
-              Explore services
+            <a href="#contact" className="hero-cta inline-flex items-center bg-transparent text-primary border-2 border-primary px-7 py-3.5 rounded-full font-semibold hover:bg-primary hover:text-white transition-all">
+              Talk to Us
             </a>
           </div>
           <div className="flex gap-10 mt-10 flex-wrap">
             {[
-              { val: "99.2%", label: "coding accuracy" },
-              { val: "10+", label: "years experience" },
-              { val: "100%", label: "HIPAA compliant" },
+              { val: "2014", label: "billing expertise since" },
+              { val: "8", label: "revenue gaps we close" },
+              { val: "100%", label: "HIPAA certified" },
             ].map((s, i) => (
               <div key={i} className="hero-stat">
                 <div className="text-3xl font-bold text-primary">{s.val}</div>
@@ -56,9 +56,9 @@ export default function Hero() {
           </div>
         </div>
         <div className="hero-visual flex-1 w-full min-w-0 bg-gradient-to-br from-[#eef7fc] to-[#d9eaf3] rounded-4xl p-8 shadow-premium-md border border-white/80 min-h-[380px] flex flex-col justify-center items-center">
-          <i className="float-icon fas fa-laptop-medical text-8xl text-primary/90 mb-4"></i>
+          <i className="float-icon fas fa-file-invoice-dollar text-8xl text-primary/90 mb-4"></i>
           <div className="flex gap-4 flex-wrap justify-center mt-4">
-            {["ICD-10 / CPT", "Revenue cycle", "AI-assisted"].map((t, i) => (
+            {["Claims", "Credentialing", "Revenue cycle"].map((t, i) => (
               <div key={i} className="mini-card bg-white px-5 py-3 rounded-full font-semibold text-sm text-primary shadow-premium-sm flex items-center gap-2">
                 <i className="fas fa-check-circle text-accent"></i> {t}
               </div>
@@ -66,7 +66,7 @@ export default function Hero() {
           </div>
           <p className="mt-6 text-sm text-primary font-medium flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-accent inline-block"></span>
-            trusted by practices &amp; clinics
+            your practice deserves to be paid
           </p>
         </div>
       </section>
