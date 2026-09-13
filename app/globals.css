@@ -5,7 +5,62 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap");
 
 html { scroll-behavior: smooth; }
-body { background:#fff; color:#1e2b3c; overflow-x:hidden; }
+body { background:#edf7f8; color:#1e2b3c; overflow-x:hidden; }
+
+.page-shell {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 8% 22%, rgba(242,181,68,.08), transparent 22%),
+    radial-gradient(circle at 92% 48%, rgba(49,169,169,.08), transparent 25%),
+    #edf7f8;
+}
+
+.navbar-theme {
+  background: rgba(244, 251, 252, .9);
+  border-color: rgba(49, 169, 169, .16);
+  backdrop-filter: blur(16px);
+}
+
+.navbar-theme::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--coral), var(--gold), var(--accent, #31a9a9), transparent);
+  opacity: .65;
+}
+
+:root {
+  --coral: #f07d62;
+  --gold: #f2b544;
+  --mint: #e8f6f5;
+  --blue-wash: #eef7fc;
+}
+
+.hero-theme {
+  background:
+    radial-gradient(circle at 86% 18%, rgba(240,125,98,.16), transparent 28%),
+    radial-gradient(circle at 15% 88%, rgba(242,181,68,.12), transparent 24%),
+    linear-gradient(135deg, #f4fbfc 0%, #eef7fc 56%, #fff8ee 100%);
+}
+
+.revenue-theme {
+  background: linear-gradient(135deg, #fffaf1 0%, #f7fbfc 52%, #eef8f6 100%);
+}
+
+.services-theme {
+  background: linear-gradient(180deg, #f8fbfd 0%, #ffffff 100%);
+}
+
+.founder-theme {
+  background: linear-gradient(135deg, #fff8f3 0%, #f7fbfe 52%, #eef8f6 100%);
+}
+
+.cta-theme {
+  background: linear-gradient(135deg, #fff8ee 0%, #f3fbfb 100%);
+}
+
+.data-flow-graphic { width: min(100%, 520px); height: auto; color: #0f4c81; }
+.data-flow-graphic-compact { width: 100%; }
 
 ::-webkit-scrollbar { width:8px; }
 ::-webkit-scrollbar-track { background:#f6fafd; }

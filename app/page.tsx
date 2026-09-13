@@ -41,7 +41,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main ref={mainRef}>
+    <main ref={mainRef} className="page-shell">
       <Navbar /><Hero /><TrustBar /><RevenueOverview /><Services />
       <HorizontalServices /><Founder /><TechStrip /><CTA /><Footer />
     </main>

@@ -12,7 +12,7 @@ export default function Services() {
     { icon: "fa-arrows-rotate", title: "Revenue Cycle Management (RCM)", desc: "Manage the complete journey from care delivery through reimbursement.", details: ["Care-to-payment workflow", "Revenue visibility", "Process coordination", "Reimbursement follow-through"] },
   ];
   return (
-    <div id="services" className="max-w-7xl mx-auto scroll-mt-28 px-4 sm:px-6 py-14 md:py-20">
+    <div id="services" className="services-theme max-w-7xl mx-auto scroll-mt-28 px-4 sm:px-6 py-14 md:py-20 rounded-[40px] md:rounded-[56px]">
       <div className="text-center max-w-2xl mx-auto mb-10 md:mb-14">
         <span className="text-accent font-semibold text-xs tracking-wider uppercase">What we do</span>
         <h2 className="text-3xl md:text-4xl font-semibold text-dark-text mt-3 mb-4">Not a task list. A team held to a higher bar.</h2>

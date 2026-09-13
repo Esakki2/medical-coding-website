@@ -1,3 +1,5 @@
+import DataFlowGraphic from "@/components/DataFlowGraphic";
+
 const leakageRows = [
   {
     problem: "Denied Claims",
@@ -46,11 +48,14 @@ const approach = [
 
 export default function RevenueOverview() {
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-20">
-      <div className="max-w-3xl mb-8 md:mb-10">
-        <span className="text-accent font-semibold text-xs tracking-wider uppercase">Where every practice loses money</span>
+    <section className="revenue-theme max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-20 rounded-[40px] md:rounded-[56px]">
+      <div className="grid lg:grid-cols-[1fr_360px] gap-8 items-center mb-8 md:mb-10">
+        <div className="max-w-3xl">
+        <span className="text-accent font-semibold text-sm md:text-base tracking-wider uppercase">Where every practice loses money</span>
         <h2 className="text-3xl md:text-5xl font-semibold text-dark-text mt-3 mb-4">And how Inovex fixes it.</h2>
         <p className="text-light-text text-base md:text-lg leading-relaxed">For a practice billing about $50,000 a month, fixing these six problems can reveal $7,000-$9,000 in revenue already earned but not collected. These are industry averages, not a promise. A free revenue check-up shows your actual numbers.</p>
+        </div>
+        <div className="hidden lg:block rounded-3xl bg-white/80 border border-white p-3 shadow-premium-sm"><DataFlowGraphic compact /></div>
       </div>
 
       <div className="hidden lg:block overflow-hidden rounded-3xl border border-slate-200 shadow-premium-sm">

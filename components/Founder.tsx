@@ -2,7 +2,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Image from "next/image";
-import founderImage from "../assets/WhatsApp Image 2026-09-13 at 21.32.09.jpeg";
+import founderImage from "../assets/WhatsApp Image 2026-09-13 at 22.49.50.jpeg";
 
 export default function Founder() {
   const ref = useRef<HTMLDivElement>(null);
@@ -16,7 +16,7 @@ export default function Founder() {
     return () => ctx.revert();
   }, []);
   return (
-    <div ref={ref} id="about" className="max-w-7xl mx-auto scroll-mt-28 px-6 py-16">
+    <div ref={ref} id="about" className="founder-theme max-w-7xl mx-auto scroll-mt-28 px-4 sm:px-6 py-12 md:py-16 rounded-[40px] md:rounded-[56px]">
       <section className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center bg-gradient-to-br from-white to-[#f7fbfe] rounded-[48px] p-8 md:p-14 border border-[#e6f0f7] shadow-premium-sm">
         <div className="flex-1 w-full">
           <div className="relative bg-gradient-to-br from-primary to-accent rounded-[40px] min-h-[340px] md:min-h-[400px] flex items-center justify-center shadow-premium-md overflow-hidden">

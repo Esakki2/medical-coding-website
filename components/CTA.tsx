@@ -14,7 +14,7 @@ export default function CTA() {
     return () => ctx.revert();
   }, []);
   return (
-    <div ref={ref} id="contact" className="max-w-7xl mx-auto px-6 py-16">
+    <div ref={ref} id="contact" className="cta-theme max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16 rounded-[40px] md:rounded-[56px]">
       <section className="bg-gradient-to-br from-primary to-[#1a5e8c] rounded-[60px] p-12 md:p-20 text-center text-white relative overflow-hidden">
         <div className="absolute -top-24 -left-24 w-72 h-72 rounded-full bg-white/5"></div>
         <div className="absolute -bottom-32 -right-20 w-80 h-80 rounded-full bg-white/5"></div>

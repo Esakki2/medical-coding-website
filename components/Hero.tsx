@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import DataFlowGraphic from "@/components/DataFlowGraphic";
 
 export default function Hero() {
   const heroRef = useRef<HTMLDivElement>(null);
