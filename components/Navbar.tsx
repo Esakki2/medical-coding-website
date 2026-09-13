@@ -32,7 +32,7 @@ export default function Navbar() {
         <nav className="w-full sm:w-auto flex gap-x-4 sm:gap-x-8 gap-y-2 items-center flex-wrap justify-center text-sm sm:text-base">
           <a href="#services" className="text-dark-text font-medium hover:text-accent transition-colors">Services</a>
           <a href="#about" className="text-dark-text font-medium hover:text-accent transition-colors">About</a>
-          <a href="#compliance" className="text-dark-text font-medium hover:text-accent transition-colors">Compliance</a>
+          <a href="#compliance" className="text-dark-text font-medium hover:text-accent transition-colors">The Difference</a>
           <a href="#contact" className="px-5 sm:px-6 py-2 sm:py-2.5 rounded-full font-semibold text-sm border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all">Contact</a>
         </nav>
       </div>

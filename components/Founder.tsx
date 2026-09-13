@@ -2,7 +2,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Image from "next/image";
-import founderImage from "../assets/WhatsApp Image 2026-09-12 at 00.39.00.jpeg";
+import founderImage from "../assets/WhatsApp Image 2026-09-13 at 21.32.09.jpeg";
 
 export default function Founder() {
   const ref = useRef<HTMLDivElement>(null);
@@ -25,7 +25,7 @@ export default function Founder() {
               alt="Dr. Nafiya, founder of INOVEX BUSINESS SOLUTIONS"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover object-center"
+              className="object-cover object-[center_25%]"
             />
             <div className="absolute inset-0 bg-primary/10"></div>
             {/* <div className="absolute bottom-6 right-6 bg-white/95 backdrop-blur rounded-2xl px-5 py-3 shadow-lg">
@@ -35,16 +35,17 @@ export default function Founder() {
           </div>
         </div>
         <div className="flex-1">
-          <h2 className="founder-text-child text-3xl md:text-4xl font-semibold text-dark-text mb-2">The Inovex Advantage</h2>
-          <div className="founder-text-child text-accent font-semibold text-lg mb-6">A Doctor&apos;s Eye. A Biller&apos;s Precision.</div>
+          <span className="founder-text-child text-accent font-semibold text-xs tracking-wider uppercase">About us: who runs this</span>
+          <h2 className="founder-text-child text-3xl md:text-4xl font-semibold text-dark-text mt-3 mb-2">Founded by a clinician. Built for clinicians.</h2>
           <p className="founder-text-child text-light-text text-base md:text-lg mb-5">
-            Here is something no generic billing company can say: the person who built our process has actually treated the patients behind your claims. Dr. Nafiya has sat with a child working through a neurological condition, documented mental health encounters, and learned what medical necessity looks like from the inside.
+            Most billing companies are run by people who have only ever seen healthcare from a spreadsheet. Inovex is led by Dr. Nafiya, MOT (Neuro), a certified Pediasuite therapist from Malaysia, with over a decade of experience in medical billing and coding as well. She sees patients every day and understands the frustration behind a denied claim from the clinical side.
           </p>
           <p className="founder-text-child text-light-text text-base md:text-lg mb-6">
-            Led by Dr. Nafiya, MOT, a Neuro Occupational Therapist and certified Pediasuite therapist, Inovex brings hands-on clinical experience together with deep medical billing and coding expertise since 2014. It is the difference between processing a claim and understanding it.
+            A denied claim is never just a billing event. It is the tail end of real clinical work: an assessment made, a treatment delivered, and documentation completed in good faith. Inovex was built on one simple belief: the person managing your revenue should understand your medicine.
           </p>
           <div className="founder-text-child border-l-4 border-accent pl-5 py-1 italic font-medium text-primary">
-            &ldquo;We know what a real clinical encounter looks like, and we protect the revenue it deserves.&rdquo;
+            &ldquo;I&apos;ve sat in the treatment room, and I&apos;ve sat behind the claims software. I built Inovex to close the gap between the two — protecting the value behind every visit, every claim, and every hour of care.&rdquo;
+            <span className="block not-italic text-sm font-semibold mt-3">— Dr. Nafiya, Founder</span>
           </div>
         </div>
       </section>

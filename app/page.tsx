@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
+import RevenueOverview from "@/components/RevenueOverview";
 import Services from "@/components/Services";
 import HorizontalServices from "@/components/HorizontalServices";
 import Founder from "@/components/Founder";
@@ -19,6 +20,9 @@ export default function Home() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
+      const isMobile = window.matchMedia("(max-width: 767px)").matches;
+      if (isMobile) return;
+
       gsap.utils.toArray<HTMLElement>(".reveal-section").forEach((el) => {
         gsap.from(el, {
           y: 60, opacity: 0, duration: 1, ease: "power3.out",
@@ -38,7 +42,7 @@ export default function Home() {
 
   return (
     <main ref={mainRef}>
-      <Navbar /><Hero /><TrustBar /><Services />
+      <Navbar /><Hero /><TrustBar /><RevenueOverview /><Services />
       <HorizontalServices /><Founder /><TechStrip /><CTA /><Footer />
     </main>
   );

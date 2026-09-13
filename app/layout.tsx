@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "INOVEX BUSINESS SOLUTIONS PVT LTD | Medical Billing & RCM",
-  description: "Medical billing and revenue-cycle management led by clinical expertise.",
+  title: "INOVEX BUSINESS SOLUTIONS | Medical Billing & RCM",
+  description: "A HIPAA-certified medical billing and revenue-cycle practice led by clinical experience.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

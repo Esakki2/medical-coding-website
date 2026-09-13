@@ -28,11 +28,11 @@ export default function Hero() {
             <i className="fas fa-shield-alt mr-2"></i>Medical Billing &amp; Revenue Cycle Management
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-5 text-dark-text leading-[1.1]">
-            <div className="hero-line-1">Stop Losing Money</div>
-            <div className="hero-line-2 gradient-text">to Paperwork.</div>
+            <div className="hero-line-1">Billing, Run by Someone</div>
+            <div className="hero-line-2 gradient-text">Who&apos;s Been There.</div>
           </h1>
           <p className="hero-desc text-lg md:text-xl text-light-text mb-8 max-w-xl">
-            You spent years becoming a doctor. Not a billing expert. Not a claims investigator. Inovex turns your clinical work into revenue that actually lands in your account.
+            A HIPAA-certified revenue-cycle practice that starts with understanding your medicine. Everything else follows from there.
           </p>
           <div className="flex gap-4 flex-wrap">
             <a href="#contact" className="hero-cta inline-flex items-center justify-center gap-2 text-center bg-primary text-white px-7 py-3.5 rounded-full font-semibold shadow-lg shadow-primary/20 hover:bg-primary-light hover:-translate-y-0.5 transition-all">
@@ -45,8 +45,8 @@ export default function Hero() {
           <div className="flex gap-10 mt-10 flex-wrap">
             {[
               { val: "2014", label: "billing expertise since" },
-              { val: "8", label: "revenue gaps we close" },
-              { val: "100%", label: "HIPAA certified" },
+              { val: "6", label: "questions we ask" },
+              { val: "24/7", label: "support available" },
             ].map((s, i) => (
               <div key={i} className="hero-stat">
                 <div className="text-3xl font-bold text-primary">{s.val}</div>
@@ -58,7 +58,7 @@ export default function Hero() {
         <div className="hero-visual flex-1 w-full min-w-0 bg-gradient-to-br from-[#eef7fc] to-[#d9eaf3] rounded-4xl p-8 shadow-premium-md border border-white/80 min-h-[380px] flex flex-col justify-center items-center">
           <i className="float-icon fas fa-file-invoice-dollar text-8xl text-primary/90 mb-4"></i>
           <div className="flex gap-4 flex-wrap justify-center mt-4">
-            {["Claims", "Credentialing", "Revenue cycle"].map((t, i) => (
+              {["Claims", "Denials", "A/R follow-up"].map((t, i) => (
               <div key={i} className="mini-card bg-white px-5 py-3 rounded-full font-semibold text-sm text-primary shadow-premium-sm flex items-center gap-2">
                 <i className="fas fa-check-circle text-accent"></i> {t}
               </div>
@@ -66,7 +66,7 @@ export default function Hero() {
           </div>
           <p className="mt-6 text-sm text-primary font-medium flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-accent inline-block"></span>
-            your practice deserves to be paid
+              your clinical work deserves to be paid
           </p>
         </div>
       </section>

@@ -6,16 +6,16 @@ export default function Footer() {
 
   return (
     <footer className="bg-dark-text text-white">
-      <div className="max-w-7xl mx-auto px-6 py-10">
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div>
-            <div className="relative h-20 w-52 overflow-hidden rounded-lg bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+        <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between gap-8">
+          <div className="w-full sm:w-auto text-center sm:text-left">
+            <div className="relative h-24 w-full max-w-[260px] mx-auto sm:mx-0 overflow-hidden rounded-lg bg-white px-4 py-2">
               <Image
                 src={logoImage}
                 alt="INOVEX Business Solutions"
                 fill
-                sizes="208px"
-                className="object-cover object-center"
+                sizes="(max-width: 640px) 260px, 260px"
+                className="object-contain object-center p-2"
               />
             </div>
             <address className="mt-3 max-w-sm not-italic text-sm leading-6 text-white/60">
