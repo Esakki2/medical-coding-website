@@ -21,10 +21,10 @@ export default function CTA() {
         <div className="relative z-10">
           <h2 className="cta-child text-3xl md:text-5xl font-semibold mb-4">Give your revenue the same standard of care.</h2>
           <p className="cta-child text-white/85 max-w-2xl mx-auto mb-8 text-lg">
-            Your patients trust you with their health. Hand your revenue to a team that understands the medicine behind the money, so you can get back to the work you were trained for.
+            Your patients trust you with their health. Hand your revenue to someone who&apos;s earned it from the clinical side first.
           </p>
             <a href="mailto:hello@inovex.health?subject=Free%20Revenue%20Check-Up" className="cta-child inline-flex items-center justify-center gap-2 text-center bg-white text-primary px-10 py-4 rounded-full font-semibold text-lg shadow-lg hover:-translate-y-0.5 transition-all">
-            Book Your Free Revenue Check-Up <i className="fas fa-arrow-right"></i>
+            Get Your Free Revenue Check-Up <i className="fas fa-arrow-right"></i>
           </a>
           <p className="cta-child mt-6 text-sm text-white/70">
             <i className="fas fa-envelope mr-2"></i>hello@inovex.health

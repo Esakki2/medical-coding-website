@@ -1,6 +1,4 @@
 export default function Footer() {
-  const year = new Date().getFullYear();
-
   return (
     <footer className="bg-gradient-to-r from-[#0f4c81] via-[#123d68] to-[#31a9a9] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10">
@@ -24,7 +22,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 pt-6 border-t border-white/10 text-center text-sm leading-6 text-white/70">
-          Copyright {year} INOVEX BUSINESS SOLUTIONS PVT LTD. All rights reserved.
+          © 2026 Inovex Business Solutions Pvt Ltd &nbsp; | &nbsp; HIPAA Certified · Billing &amp; Coding Since 2014
         </div>
       </div>
     </footer>

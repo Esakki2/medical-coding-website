@@ -16,7 +16,7 @@ const config: Config = {
         "dark-text": "#0c1e2e",
         "light-text": "#4b5e6e",
       },
-      fontFamily: { sans: ["Inter", "sans-serif"] },
+      fontFamily: { sans: ["DM Sans", "sans-serif"] },
       borderRadius: { "4xl": "2rem", "5xl": "3rem" },
       boxShadow: {
         "premium-sm": "0 10px 25px -5px rgba(0, 0, 0, 0.03), 0 8px 10px -6px rgba(0, 0, 0, 0.02)",

@@ -35,16 +35,13 @@ export default function Founder() {
           </div>
         </div>
         <div className="flex-1">
-          <span className="founder-text-child text-accent font-semibold text-xs tracking-wider uppercase">About us: who runs this</span>
+          <span className="founder-text-child text-accent font-semibold text-xs tracking-wider uppercase">WHO RUNS THIS</span>
           <h2 className="founder-text-child text-3xl md:text-4xl font-semibold text-dark-text mt-3 mb-2">Founded by a clinician. Built for clinicians.</h2>
           <p className="founder-text-child text-light-text text-base md:text-lg mb-5">
-            Most billing companies are run by people who have only ever seen healthcare from a spreadsheet. Inovex is led by Dr. Nafiya, MOT (Neuro), a certified Pediasuite therapist from Malaysia, with over a decade of experience in medical billing and coding as well. She sees patients every day and understands the frustration behind a denied claim from the clinical side.
-          </p>
-          <p className="founder-text-child text-light-text text-base md:text-lg mb-6">
-            A denied claim is never just a billing event. It is the tail end of real clinical work: an assessment made, a treatment delivered, and documentation completed in good faith. Inovex was built on one simple belief: the person managing your revenue should understand your medicine.
+            Dr. Nafiya, MOT (Neuro), certified Pediasuite therapist, has treated patients daily and coded claims since 2014. She knows both sides of a denial — the exam room and the software behind it.
           </p>
           <div className="founder-text-child border-l-4 border-accent pl-5 py-1 italic font-medium text-primary">
-            &ldquo;I&apos;ve sat in the treatment room, and I&apos;ve sat behind the claims software. I built Inovex to close the gap between the two — protecting the value behind every visit, every claim, and every hour of care.&rdquo;
+            &ldquo;I&apos;ve sat in the treatment room, and I&apos;ve sat behind the claims software. I built Inovex to close the gap between the two.&rdquo;
             <span className="block not-italic text-sm font-semibold mt-3">— Dr. Nafiya, Founder</span>
           </div>
         </div>

@@ -7,9 +7,9 @@ import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
 import RevenueOverview from "@/components/RevenueOverview";
 import Services from "@/components/Services";
-import HorizontalServices from "@/components/HorizontalServices";
 import Founder from "@/components/Founder";
 import TechStrip from "@/components/TechStrip";
+import WhyChoose from "@/components/WhyChoose";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
@@ -43,7 +43,7 @@ export default function Home() {
   return (
     <main ref={mainRef} className="page-shell">
       <Navbar /><Hero /><TrustBar /><RevenueOverview /><Services />
-      <HorizontalServices /><Founder /><TechStrip /><CTA /><Footer />
+      <Founder /><TechStrip /><WhyChoose /><CTA /><Footer />
     </main>
   );
 }
