@@ -5,6 +5,7 @@ import gsap from "gsap";
 export default function CTA() {
   const ref = useRef<HTMLDivElement>(null);
   const [formStatus, setFormStatus] = useState("");
+  const [fallbackEmailHref, setFallbackEmailHref] = useState("");
   const [isSending, setIsSending] = useState(false);
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -23,8 +24,17 @@ export default function CTA() {
 
     const form = event.currentTarget;
     const fields = Object.fromEntries(new FormData(form).entries());
+    const fallbackBody = [
+      `Name: ${fields.name || ""}`,
+      `Email: ${fields.email || ""}`,
+      `Phone: ${fields.phone || "Not provided"}`,
+      "",
+      `Message: ${fields.message || ""}`,
+    ].join("\n");
+    const fallbackHref = `mailto:inovex.bs@gmail.com?subject=${encodeURIComponent("Website enquiry")}&body=${encodeURIComponent(fallbackBody)}`;
 
     try {
+      setFallbackEmailHref("");
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -38,6 +48,7 @@ export default function CTA() {
       setFormStatus(result.message);
     } catch (error) {
       setFormStatus(error instanceof Error ? error.message : "Unable to send your message right now.");
+      setFallbackEmailHref(fallbackHref);
     } finally {
       setIsSending(false);
     }
@@ -53,7 +64,7 @@ export default function CTA() {
           <p className="cta-child text-white/85 max-w-2xl mx-auto mb-8 text-lg">
             Your patients trust you with their health. Hand your revenue to someone who&apos;s earned it from the clinical side first.
           </p>
-            <a href="mailto:Inovex.bs@gmail.com?subject=Free%20Revenue%20Check-Up" className="cta-child inline-flex items-center justify-center gap-2 text-center bg-white text-primary px-10 py-4 rounded-full font-semibold text-lg shadow-lg hover:-translate-y-0.5 transition-all">
+            <a href="mailto:inovex.bs@gmail.com?subject=Free%20Revenue%20Check-Up" className="cta-child inline-flex items-center justify-center gap-2 text-center bg-white text-primary px-10 py-4 rounded-full font-semibold text-lg shadow-lg hover:-translate-y-0.5 transition-all">
             Get Your Free Revenue Check-Up <i className="fas fa-arrow-right"></i>
           </a>
             <form
@@ -109,7 +120,16 @@ export default function CTA() {
               >
                 {isSending ? "Sending..." : "Send Message"} <i className="fas fa-paper-plane"></i>
               </button>
-              {formStatus && <p className="text-center text-sm text-white md:col-span-2" role="status">{formStatus}</p>}
+              {formStatus && (
+                <div className="text-center text-sm text-white md:col-span-2" role="status">
+                  <p>{formStatus}</p>
+                  {fallbackEmailHref && (
+                    <a href={fallbackEmailHref} className="mt-2 inline-block font-semibold underline underline-offset-4">
+                      Open your email app to send this message directly
+                    </a>
+                  )}
+                </div>
+              )}
             </form>
           <p className="cta-child mt-6 text-sm text-white/70">
               <i className="fas fa-envelope mr-2"></i>Inovex.bs@gmail.com
