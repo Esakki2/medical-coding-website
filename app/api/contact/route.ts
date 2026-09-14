@@ -46,7 +46,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "One or more fields are too long." }, { status: 400 });
     }
 
-    const requiredEnv = ["EMAIL_USER", "EMAIL_PASS", "CONTACT_EMAIL"] as const;
+    const requiredEnv = ["EMAIL_USER", "EMAIL_PASS"] as const;
 
     for (const key of requiredEnv) {
       if (!process.env[key]) {
@@ -64,7 +64,7 @@ export async function POST(request: Request) {
 
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
-      to: process.env.CONTACT_EMAIL,
+      to: "inovex.bs@gmail.com",
       replyTo: email,
       subject: `New website enquiry from ${name}`,
       text: [
