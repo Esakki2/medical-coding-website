@@ -1,9 +1,11 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
 export default function CTA() {
   const ref = useRef<HTMLDivElement>(null);
+  const [formStatus, setFormStatus] = useState("");
+  const [isSending, setIsSending] = useState(false);
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.from(".cta-child", {
@@ -13,6 +15,34 @@ export default function CTA() {
     }, ref);
     return () => ctx.revert();
   }, []);
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setIsSending(true);
+    setFormStatus("");
+
+    const form = event.currentTarget;
+    const fields = Object.fromEntries(new FormData(form).entries());
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(fields),
+      });
+      const result = await response.json();
+
+      if (!response.ok) throw new Error(result.error);
+
+      form.reset();
+      setFormStatus(result.message);
+    } catch (error) {
+      setFormStatus(error instanceof Error ? error.message : "Unable to send your message right now.");
+    } finally {
+      setIsSending(false);
+    }
+  }
+
   return (
     <div ref={ref} id="contact" className="cta-theme max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16 rounded-[40px] md:rounded-[56px]">
       <section className="bg-gradient-to-br from-primary to-[#1a5e8c] rounded-[60px] p-12 md:p-20 text-center text-white relative overflow-hidden">
@@ -23,11 +53,66 @@ export default function CTA() {
           <p className="cta-child text-white/85 max-w-2xl mx-auto mb-8 text-lg">
             Your patients trust you with their health. Hand your revenue to someone who&apos;s earned it from the clinical side first.
           </p>
-            <a href="mailto:hello@inovex.health?subject=Free%20Revenue%20Check-Up" className="cta-child inline-flex items-center justify-center gap-2 text-center bg-white text-primary px-10 py-4 rounded-full font-semibold text-lg shadow-lg hover:-translate-y-0.5 transition-all">
+            <a href="mailto:Inovex.bs@gmail.com?subject=Free%20Revenue%20Check-Up" className="cta-child inline-flex items-center justify-center gap-2 text-center bg-white text-primary px-10 py-4 rounded-full font-semibold text-lg shadow-lg hover:-translate-y-0.5 transition-all">
             Get Your Free Revenue Check-Up <i className="fas fa-arrow-right"></i>
           </a>
+            <form
+              onSubmit={handleSubmit}
+              className="cta-child mx-auto mt-10 grid max-w-3xl grid-cols-1 gap-4 rounded-3xl bg-white/10 p-5 text-left backdrop-blur-sm sm:p-7 md:grid-cols-2"
+            >
+              <label className="text-sm font-semibold text-white">
+                Name
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  autoComplete="name"
+                  placeholder="Your name"
+                  className="mt-2 w-full rounded-xl border border-white/20 bg-white px-4 py-3 font-normal text-dark-text outline-none transition placeholder:text-slate-400 focus:border-accent focus:ring-2 focus:ring-accent/30"
+                />
+              </label>
+              <label className="text-sm font-semibold text-white">
+                Email
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  autoComplete="email"
+                  placeholder="you@example.com"
+                  className="mt-2 w-full rounded-xl border border-white/20 bg-white px-4 py-3 font-normal text-dark-text outline-none transition placeholder:text-slate-400 focus:border-accent focus:ring-2 focus:ring-accent/30"
+                />
+              </label>
+              <label className="text-sm font-semibold text-white">
+                Phone
+                <input
+                  type="tel"
+                  name="phone"
+                  autoComplete="tel"
+                  placeholder="Your phone number"
+                  className="mt-2 w-full rounded-xl border border-white/20 bg-white px-4 py-3 font-normal text-dark-text outline-none transition placeholder:text-slate-400 focus:border-accent focus:ring-2 focus:ring-accent/30"
+                />
+              </label>
+              <label className="text-sm font-semibold text-white md:col-span-2">
+                Message
+                <textarea
+                  name="message"
+                  required
+                  rows={4}
+                  placeholder="How can we help?"
+                  className="mt-2 w-full resize-y rounded-xl border border-white/20 bg-white px-4 py-3 font-normal text-dark-text outline-none transition placeholder:text-slate-400 focus:border-accent focus:ring-2 focus:ring-accent/30"
+                />
+              </label>
+              <button
+                type="submit"
+                disabled={isSending}
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-accent px-7 py-3 font-semibold text-white shadow-lg transition-all hover:-translate-y-0.5 hover:bg-accent/90 md:col-span-2 md:justify-self-center"
+              >
+                {isSending ? "Sending..." : "Send Message"} <i className="fas fa-paper-plane"></i>
+              </button>
+              {formStatus && <p className="text-center text-sm text-white md:col-span-2" role="status">{formStatus}</p>}
+            </form>
           <p className="cta-child mt-6 text-sm text-white/70">
-            <i className="fas fa-envelope mr-2"></i>hello@inovex.health
+              <i className="fas fa-envelope mr-2"></i>Inovex.bs@gmail.com
             <span className="mx-4">•</span>
             <i className="fas fa-phone-alt mr-2"></i>(91) 90804 24263
           </p>

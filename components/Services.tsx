@@ -17,7 +17,7 @@ export default function Services() {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
         {services.map((s, i) => (
-          <div key={i} className="bg-white p-5 sm:p-6 rounded-3xl border border-slate-100 shadow-premium-sm hover:shadow-premium-md hover:-translate-y-1.5 transition-all duration-300">
+          <div key={i} className="service-card bg-white p-5 sm:p-6 rounded-3xl border border-slate-100 shadow-premium-sm hover:shadow-premium-md hover:-translate-y-1.5 transition-all duration-300">
             <div className="w-14 h-14 rounded-2xl bg-accent-soft flex items-center justify-center mb-5">
               <i className={`fas ${s.icon} text-xl text-primary`}></i>
             </div>

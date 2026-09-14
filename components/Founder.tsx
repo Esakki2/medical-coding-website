@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Image from "next/image";
 import { Highlight } from "@/components/ui/hero-highlight";
-import founderImage from "../assets/WhatsApp Image 2026-09-13 at 22.49.50.jpeg";
+import founderImage from "../assets/WhatsApp Image 2026-09-14 at 13.24.19.jpeg";
 
 export default function Founder() {
   const ref = useRef<HTMLDivElement>(null);
@@ -19,14 +19,14 @@ export default function Founder() {
   return (
     <div ref={ref} id="about" className="founder-theme max-w-7xl mx-auto scroll-mt-28 px-4 sm:px-6 py-12 md:py-16 rounded-[40px] md:rounded-[56px]">
       <section className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center bg-gradient-to-br from-white to-[#f7fbfe] rounded-[48px] p-8 md:p-14 border border-[#e6f0f7] shadow-premium-sm">
-        <div className="flex-1 w-full">
+        <div className="flex-1 w-full lg:translate-y-8">
           <div className="relative bg-gradient-to-br from-primary to-accent rounded-[40px] min-h-[340px] md:min-h-[400px] flex items-center justify-center shadow-premium-md overflow-hidden">
             <Image
               src={founderImage}
               alt="Dr. Nafiya, founder of INOVEX BUSINESS SOLUTIONS"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover object-[center_25%]"
+              className="object-cover object-top"
             />
             <div className="absolute inset-0 bg-primary/10"></div>
             {/* <div className="absolute bottom-6 right-6 bg-white/95 backdrop-blur rounded-2xl px-5 py-3 shadow-lg">
@@ -39,7 +39,7 @@ export default function Founder() {
           <span className="founder-text-child text-accent font-semibold text-xs tracking-wider uppercase">WHO RUNS THIS</span>
           <h2 className="founder-text-child text-3xl md:text-4xl font-semibold text-dark-text mt-3 mb-2">Founded by a clinician. Built for clinicians.</h2>
           <p className="founder-text-child text-light-text text-base md:text-lg leading-8 mb-5">
-            Most billing companies are run by people who have only ever seen healthcare from a spreadsheet — codes, denials, and aging reports, with no real sense of what happened in the room before any of it was generated. Inovex is different. It is led by a woman who is herself a doctor — <Highlight className="bg-gradient-to-r from-[#f2b544] to-[#f07d62] font-bold text-black dark:text-white">Dr. Nafiya, MOT (Neuro), certified Pediasuite therapist (Malaysia)</Highlight> — with over a decade of experience in medical billing and coding as well.
+            Most billing companies are run by people who have only ever seen healthcare from a spreadsheet — codes, denials, and aging reports, with no real sense of what happened in the room before any of it was generated. Inovex is different. It is led by a woman who is herself a doctor — <Highlight className="bg-gradient-to-r from-sky-100 to-sky-200 font-bold text-black dark:text-white">Dr. Nafiya, MOT (Neuro), certified Pediasuite therapist (Malaysia)</Highlight> — with over a decade of experience in medical billing and coding as well.
           </p>
           <p className="founder-text-child text-light-text text-base md:text-lg leading-8 mb-5">
             She sees patients every single day, so she understands the real frustration behind a denied claim from the clinical side. And she has spent just as long inside billing, so she knows exactly how the system works from that side too.

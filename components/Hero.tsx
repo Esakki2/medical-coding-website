@@ -58,7 +58,6 @@ export default function Hero() {
           <div className="flex gap-10 mt-10 flex-wrap">
             {[
               { val: "2014", label: "billing since" },
-              { val: "6", label: "questions asked per claim" },
               { val: "24/7", label: "support access" },
             ].map((s, i) => (
               <div key={i} className="hero-stat">
@@ -85,10 +84,10 @@ export default function Hero() {
               </div>
             ))}
           </div> */}
-          {/* <p className="mini-card bg-white px-5 py-3 rounded-full relative z-10 mb-7 mt-6 text-sm font-medium text-white flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-accent inline-block"></span>
-              your clinical work deserves to be paid
-          </p> */}
+          <p className="relative z-10 mb-7 mt-6 flex max-w-[calc(100%-2rem)] items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-center text-sm font-semibold text-primary shadow-premium-sm sm:max-w-full">
+            <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+            Our Specialty — Getting You Paid, Fully and Faster.
+          </p>
         </div>
       </section>
     </div>
