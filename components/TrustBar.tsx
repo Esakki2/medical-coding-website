@@ -3,7 +3,7 @@ import { LeanCard, LeanCardContent } from "@/components/ui/lean-card";
 export default function TrustBar() {
   const specialties = [
     {
-      title: "We increase your revenu",
+      title: "We increase your revenue",
       body: "we chase what’s owed to you. Lost claims. Missed payments. Hidden revenue. We go after every dollar.",
       icon: "fa-arrow-trend-up",
     },
