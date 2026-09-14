@@ -131,10 +131,14 @@ export default function CTA() {
                 </div>
               )}
             </form>
-          <p className="cta-child mt-6 text-sm text-white/70">
+          <p className="cta-child mt-6 flex flex-col items-center justify-center gap-2 text-sm text-white/70 sm:flex-row sm:gap-0">
+            <span className="inline-flex items-center">
               <i className="fas fa-envelope mr-2"></i>Inovex.bs@gmail.com
-            <span className="mx-4">•</span>
-            <i className="fas fa-phone-alt mr-2"></i>(91) 90804 24263
+            </span>
+            <span className="hidden sm:inline sm:mx-4">•</span>
+            <span className="inline-flex items-center">
+              <i className="fas fa-phone-alt mr-2"></i>(+91) 90804 24263
+            </span>
           </p>
         </div>
       </section>
