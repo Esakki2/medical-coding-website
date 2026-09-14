@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Image from "next/image";
+import { Highlight } from "@/components/ui/hero-highlight";
 import founderImage from "../assets/WhatsApp Image 2026-09-13 at 22.49.50.jpeg";
 
 export default function Founder() {
@@ -37,13 +38,19 @@ export default function Founder() {
         <div className="flex-1">
           <span className="founder-text-child text-accent font-semibold text-xs tracking-wider uppercase">WHO RUNS THIS</span>
           <h2 className="founder-text-child text-3xl md:text-4xl font-semibold text-dark-text mt-3 mb-2">Founded by a clinician. Built for clinicians.</h2>
-          <p className="founder-text-child text-light-text text-base md:text-lg mb-5">
-            Dr. Nafiya, MOT (Neuro), certified Pediasuite therapist, has treated patients daily and coded claims since 2014. She knows both sides of a denial — the exam room and the software behind it.
+          <p className="founder-text-child text-light-text text-base md:text-lg leading-8 mb-5">
+            Most billing companies are run by people who have only ever seen healthcare from a spreadsheet — codes, denials, and aging reports, with no real sense of what happened in the room before any of it was generated. Inovex is different. It is led by a woman who is herself a doctor — <Highlight className="bg-gradient-to-r from-[#f2b544] to-[#f07d62] font-bold text-black dark:text-white">Dr. Nafiya, MOT (Neuro), certified Pediasuite therapist (Malaysia)</Highlight> — with over a decade of experience in medical billing and coding as well.
+          </p>
+          <p className="founder-text-child text-light-text text-base md:text-lg leading-8 mb-5">
+            She sees patients every single day, so she understands the real frustration behind a denied claim from the clinical side. And she has spent just as long inside billing, so she knows exactly how the system works from that side too.
           </p>
           <div className="founder-text-child border-l-4 border-accent pl-5 py-1 italic font-medium text-primary">
-            &ldquo;I&apos;ve sat in the treatment room, and I&apos;ve sat behind the claims software. I built Inovex to close the gap between the two.&rdquo;
+            &ldquo;I&apos;ve sat in the treatment room, and I&apos;ve sat behind the claims software. I built Inovex to close the gap between the two, protecting the value behind every visit, every claim, and every hour of care.&rdquo;
             <span className="block not-italic text-sm font-semibold mt-3">— Dr. Nafiya, Founder</span>
           </div>
+          <p className="founder-text-child mt-7 text-2xl font-bold leading-9 text-primary md:text-3xl">
+            Your Patients Trust You With Their Health.
+          </p>
         </div>
       </section>
     </div>

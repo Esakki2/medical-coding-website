@@ -22,7 +22,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 pt-6 border-t border-white/10 text-center text-sm leading-6 text-white/70">
-          © 2026 Inovex Business Solutions Pvt Ltd &nbsp; | &nbsp; HIPAA Certified · Billing &amp; Coding Since 2014
+          © 2026 Inovex Business Solutions Pvt Ltd &nbsp; | &nbsp; HIPAA Certified
         </div>
       </div>
     </footer>

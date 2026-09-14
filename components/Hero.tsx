@@ -39,7 +39,7 @@ export default function Hero() {
       <section className="py-10 md:py-20 flex flex-col lg:flex-row items-center gap-10 lg:gap-12">
         <div className="flex-1 w-full min-w-0">
           <span className="hero-badge highlight-pill mb-6">
-            <i className="fas fa-shield-alt mr-2"></i>HIPAA-CERTIFIED · BILLING SINCE 2014
+            <i className="fas fa-shield-alt mr-2"></i>HIPAA-CERTIFIED
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-5 text-dark-text leading-[1.1]">
             <span className="hero-word inline-block">Billing run by someone who&apos;s actually stood where you stand.</span>
@@ -78,17 +78,17 @@ export default function Hero() {
             className="object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-primary/55 via-transparent to-white/10"></div>
-          <div className="relative z-10 flex gap-4 flex-wrap justify-center px-4 mt-4">
+          {/* <div className="relative z-10 flex gap-4 flex-wrap justify-center px-4 mt-4">
               {["Claims", "Denials", "A/R follow-up"].map((t, i) => (
               <div key={i} className="mini-card bg-white px-5 py-3 rounded-full font-semibold text-sm text-primary shadow-premium-sm flex items-center gap-2">
                 <i className="fas fa-check-circle text-accent"></i> {t}
               </div>
             ))}
-          </div>
-          <p className="relative z-10 mb-7 mt-6 text-sm font-medium text-white flex items-center gap-2">
+          </div> */}
+          {/* <p className="mini-card bg-white px-5 py-3 rounded-full relative z-10 mb-7 mt-6 text-sm font-medium text-white flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-accent inline-block"></span>
               your clinical work deserves to be paid
-          </p>
+          </p> */}
         </div>
       </section>
     </div>

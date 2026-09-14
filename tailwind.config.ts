@@ -15,6 +15,8 @@ const config: Config = {
         "soft-bg": "#f6fafd",
         "dark-text": "#0c1e2e",
         "light-text": "#4b5e6e",
+        border: "#dbe5eb",
+        ring: "#31a9a9",
       },
       fontFamily: { sans: ["DM Sans", "sans-serif"] },
       borderRadius: { "4xl": "2rem", "5xl": "3rem" },
