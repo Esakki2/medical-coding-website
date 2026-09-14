@@ -12,6 +12,19 @@ function isValidEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
+function escapeHtml(value: string) {
+  return value.replace(/[&<>'"]/g, (character) => {
+    const entities: Record<string, string> = {
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      "'": "&#39;",
+      '"': "&quot;",
+    };
+    return entities[character];
+  });
+}
+
 export async function POST(request: Request) {
   try {
     const body = await request.json();
@@ -33,13 +46,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "One or more fields are too long." }, { status: 400 });
     }
 
-    const requiredEnv = [
-      "SMTP_HOST",
-      "SMTP_PORT",
-      "SMTP_USER",
-      "SMTP_PASSWORD",
-      "CONTACT_EMAIL",
-    ] as const;
+    const requiredEnv = ["EMAIL_USER", "EMAIL_PASS", "CONTACT_EMAIL"] as const;
 
     for (const key of requiredEnv) {
       if (!process.env[key]) {
@@ -48,21 +55,33 @@ export async function POST(request: Request) {
     }
 
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT),
-      secure: process.env.SMTP_SECURE === "true",
+      service: "gmail",
       auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASSWORD,
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
     });
 
     await transporter.sendMail({
-      from: process.env.SMTP_USER,
+      from: process.env.EMAIL_USER,
       to: process.env.CONTACT_EMAIL,
       replyTo: email,
       subject: `New website enquiry from ${name}`,
-      text: [`Name: ${name}`, `Email: ${email}`, `Phone: ${phone || "Not provided"}`, "", message].join("\n"),
+      text: [
+        `Name: ${name}`,
+        `Email: ${email}`,
+        `Phone: ${phone || "Not provided"}`,
+        "",
+        `Message:\n${message}`,
+      ].join("\n"),
+      html: `
+        <h3>New Contact Form Submission</h3>
+        <p><strong>Name:</strong> ${escapeHtml(name)}</p>
+        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+        <p><strong>Phone:</strong> ${escapeHtml(phone || "Not provided")}</p>
+        <p><strong>Message:</strong></p>
+        <p>${escapeHtml(message).replace(/\n/g, "<br>")}</p>
+      `,
     });
 
     return NextResponse.json({ message: "Your message has been sent." });
