@@ -84,9 +84,9 @@ export default function Hero() {
               </div>
             ))}
           </div> */}
-          <p className="relative z-10 mb-7 mt-6 flex max-w-[calc(100%-2rem)] items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-center text-sm font-semibold text-primary shadow-premium-sm sm:max-w-full">
+          <p className="relative z-10 mb-7 mt-6 flex max-w-[calc(100%-2rem)] items-baseline justify-center gap-1 rounded-full bg-white px-5 py-3 text-center text-sm font-semibold leading-6 text-primary shadow-premium-sm sm:max-w-full">
             <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
-            Our Specialty — Getting You Paid, Fully and Faster.
+            <span>Our Specialty — Getting You Paid, Fully and Faster.</span>
           </p>
         </div>
       </section>

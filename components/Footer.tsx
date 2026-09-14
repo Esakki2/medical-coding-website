@@ -8,9 +8,9 @@ export default function Footer() {
               <span className="text-xl sm:text-2xl font-black tracking-[0.18em] text-[#f7fbff] uppercase">INOVEX</span>
               <span className="mt-1 text-[0.58rem] sm:text-[0.7rem] font-semibold tracking-[0.18em] text-[#c8f5ee] uppercase">Business Solutions</span>
             </div>
-            <address className="mt-4 max-w-sm not-italic text-sm leading-6 text-white/75">
+            {/* <address className="mt-4 max-w-sm not-italic text-sm leading-6 text-white/75">
               No. 5, Sri Ram Nagar, 1st Main Road, Mugalivakkam, Porur, Chennai - 600116
-            </address>
+            </address> */}
           </div>
 
           <div className="flex items-center gap-3">

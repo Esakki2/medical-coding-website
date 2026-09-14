@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Image from "next/image";
 import { Highlight } from "@/components/ui/hero-highlight";
-import founderImage from "../assets/WhatsApp Image 2026-09-14 at 13.24.19.jpeg";
+import founderImage from "../assets/new-crop-founder.jpeg";
 
 export default function Founder() {
   const ref = useRef<HTMLDivElement>(null);
